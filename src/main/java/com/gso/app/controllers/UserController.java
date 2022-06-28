@@ -128,8 +128,4 @@ public class UserController {
    * @version 1.0
    * @param favoritTheme
    */
-  @GetMapping("/{favoritTheme}")
-  public ResponseEntity<List<UserModel>> getByTitle(@PathVariable String favoritTheme) {
-    return ResponseEntity.ok(repository.findAllByFavoritThemeContainingIgnoreCase(favoritTheme));
-  }
 }
